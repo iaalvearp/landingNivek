@@ -1,0 +1,47 @@
+---
+const {href, src, alt, title, keyword} = Astro.props;
+---
+
+<a href={href} target="_blank" class="relative w-[max-content] grid justify-center gap-3">
+    <img class="headerPic absolute rounded mx-auto" 
+    src={src} 
+    alt={alt}>
+    <div 
+    id="textContainer" 
+    class="absolute grid">
+        <h2 class="text-2xl text-center">
+            {title}
+            <span class="text-[var(--dark-accent)]">
+                {keyword}
+            </span>
+        </h2>
+    </div>
+</a>
+
+<!-- <MiniCard
+            href="#"
+            src="https://nivekstudio.com/2.07ca36b5.jpg"
+            alt="brand-registrer"
+            title="Registra tu "
+            keyword="Marca"
+            ></MiniCard>
+            <MiniCard
+            href="#"
+            src="https://nivekstudio.com/1.1770e3b3.jpg"
+            alt="agency-pic"
+            title="Sobre "
+            keyword="El Estudio"
+            ></MiniCard>  -->
+
+<style>
+    .headerPic{
+        min-width: 90%;
+        max-width: 22rem;
+        filter: grayscale(100%);
+        transition: filter 300ms;
+    }
+
+    a:hover .headerPic{
+        filter: grayscale(0);
+    }
+</style>
