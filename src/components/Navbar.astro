@@ -1,14 +1,14 @@
 ---
-
+import LogoNav from "./logoNav.astro"
 ---
 
-<nav class="absolute w-full h-16 z-30">
-    <div class="w-[90%] lg:w-4/5 h-full mx-auto py-4 flex justify-between">
-        <img class="h-full" src="/logo-dark-nivek.svg" alt="Nivek logo">
-        <div class="flex gap-2">
-            <a href="https://www.facebook.com/nivek.ec" target="_blank" rel="noopener noreferrer">
+<nav class="fixed w-full h-16 z-40 top-0 border-b-[1px] border-[var(--dark-text)]">
+    <div id="navContainer" class="w-[90%] md:w-4/5 h-full mx-auto py-4 flex justify-between">
+        <LogoNav></LogoNav>
+        <div id="socialNavContainer" class="flex gap-2">
+            <a class="rounded transition-colors duration-500" href="https://www.facebook.com/nivek.ec" target="_blank" rel="noopener noreferrer">
                 <svg
-                class="lg:transition-colors lg:duration-300 hover:text-[var(--dark-accent)] cursor-pointer" 
+                class="transition duration-500 hover:text-[var(--dark-accent)] hover:-translate-y-1 cursor-pointer" 
                 width="32"
                 height="32"
                 viewBox="0 0 24 24"
@@ -17,9 +17,9 @@
                 fill="none"
                 stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" /></svg>
             </a>
-            <a href="https://www.instagram.com/nivekstudio/" target="_blank" rel="noopener noreferrer">
+            <a class="rounded transition-colors duration-500" href="https://www.instagram.com/nivekstudio/" target="_blank" rel="noopener noreferrer">
                 <svg
-                class="lg:transition-colors lg:duration-300 hover:text-[var(--dark-accent)] cursor-pointer" 
+                class="transition duration-500 hover:text-[var(--dark-accent)] hover:-translate-y-1 cursor-pointer" 
                 width="32"
                 height="32"
                 viewBox="0 0 24 24" 
@@ -34,7 +34,49 @@
 
 <style>
     nav{
-        background: rgba(var(--dark-background), 35%);
-        backdrop-filter: blur(5px);
+        background-color: var(--dark-background);
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        
+        animation: miniature linear both;
+        animation-timeline: scroll(root block);
+        animation-range: 0 12.5rem;
+    }
+    #navContainer{
+        animation: reducer linear both;
+        animation-timeline: scroll(root block);
+        animation-range: 0 12.5rem;
+    }
+
+    a:hover svg{
+        stroke: var(--dark-accent);
+    }
+
+    @keyframes miniature {
+        to {
+            width: 60%;
+            border-bottom-left-radius: 1rem;
+            border-bottom-right-radius: 1rem;
+            background-color: var(--dark-blur-background);
+            backdrop-filter: blur(4px);
+            padding: 0 2rem;
+            border-bottom: none;
+        }
+    }
+
+    @keyframes reducer {
+        to{
+            width: 100%;
+        }
+    }
+
+    @media (width < 520px) {
+        #socialNavContainer {
+            display: none;
+        }
+        #navContainer{
+            justify-content: center;
+        }
     }
 </style>

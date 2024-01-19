@@ -3,32 +3,36 @@ interface Props {
 	title: string;
 }
 const { title } = Astro.props;
+import { ViewTransitions } from 'astro:transitions';
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" transition:animate="slide">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/nivek-studio-favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
+		<meta name="theme-color" content="#1E1E2C">
 		<title>{title}</title>
+		<ViewTransitions />
 	</head>
-	<body class=" min-h-screen">
+	<body class=" min-h-[100dvh]">
 		<slot />
 	</body>
 </html>
 <style is:global>
 	:root {
-		--background: #F2F8F8;
-		--blur-background: rgba(var(--background), 20%);
+		--background: #f2f8f8;
+		--blur-background: #f2f8f833;
 		--text: #595D60;
 		--hover: #67888D;
 		--accent: #B3C9C9;
 		
 		--dark-background: #1E1E2C;
-		--dark-blur-background: rgba(var(--dark-background), 50%);
+		--dark-blur-background: rgba(30, 30, 44, 0.8);
+		--dark-minBlur-background: rgba(30, 30, 44, 0.3);
 		--dark-text: #F2F8F8;
 		--dark-hover: #2D2D44;
 		--dark-accent: #33E1ED;

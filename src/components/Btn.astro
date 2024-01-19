@@ -1,0 +1,14 @@
+---
+const {href} = Astro.props;
+---
+
+<a class="py-3 px-8 rounded-sm transition duration-500 hover:-translate-y-1 text-center font-medium md:text-lg border-[1px] border-[var(--dark-text)] hover:bg-[var(--dark-text)] hover:text-[var(--dark-background)]" href={href} target="_blank" rel="noopener noreferrer">
+    <slot />
+</a>
+
+<style>
+    a{
+        background: var(--dark-minBlur-background);
+        backdrop-filter: blur(4px);
+    }
+</style>

@@ -1,0 +1,25 @@
+---
+import Carrousel from '../components/Carrousel.astro'
+---
+
+<section id="services" class="h-full min-h-dvh w-full bg-[var(--dark-background)] grid grid-cols-1 md:grid-cols-[2fr_3fr] grid-rows-[100%] md:grid-rows-[4rem_1fr]">
+    <div class="h-full w-full grid relative col-start-1 col-end-2 row-start-1 row-end-[-1] z-0">
+        <video src="/servicesBg.mp4" class="absolute h-full w-auto object-cover object-right z-0 col-start-1 col-end-2" autoplay muted loop></video>
+        <div class="absolute h-full w-full bg-[var(--dark-blur-background)] md:bg-[var(--dark-minBlur-background)] z-10 col-start-1 col-end-2"></div>
+    </div>
+    <div class="h-full w-full max-w-[40rem] col-start-1 col-end-2 md:col-start-2 md:col-end-3 row-start-1 row-end-[-1] md:row-start-2 py-4 px-10 grid gap-[1em] place-content-center z-10">
+        <h2 class="text-[var(--dark-text)] font-black text-4xl md:text-5xl text-center md:text-left text-balance">
+            Contamos con <strong>Servicios</strong> Especializados.
+        </h2>
+        <p class="max-w-[40em] min-w-72 px-[5%] md:p-0 text-center text-pretty md:text-left md:text-lg">
+            Somos un <strong>Agencia</strong> creativa con más de <strong>9 años</strong> integrada por personas profesionales y apasionados por un diseño de calidad.
+        </p>
+        <Carrousel></Carrousel>
+    </div>
+</section>
+
+<style>
+    strong{
+        color: var(--dark-accent);
+    }
+</style>

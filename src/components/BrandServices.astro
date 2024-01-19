@@ -1,0 +1,114 @@
+---
+import Article from "./Article.astro";
+
+
+---
+
+<section id="register" class="relative min-h-[100dvh] w-full bg-[var(--dark-background)] grid gap-8 overflow-hidden">
+    <h2 class="text-[var(--dark-text)] font-black text-center text-5xl row-start-2 row-end-3">¿Por qué registrar tu marca?</h2>
+    <div id="sectionContainer" class="h-full w-full md:w-4/5 px-[10%] md:p-0 row-start-3 row-end-4 pb-4 md:pb-0">
+        <Article
+        src="/beneficio.avif"
+        alt="Imagen de expansión de la marca"
+        title="Beneficios"
+        href="/beneficio"
+        linkText="Ver más"
+        >
+        <p>Algunos beneficios de registrar tu <strong>marca</strong> son el derecho a <strong>franquiciar</strong> tu producto o servicio, y la posibilidad de garantizar un crédito bancario con tu marca.</p>
+        </Article>
+        <Article
+        src="/proteccion.avif"
+        alt="Imagen de los peligros que ocurren por no tener asesoría"
+        title="Protección"
+        href="/proteccion"
+        linkText="Ver más"
+        >
+        <p>Después de registrar tu marca, el SENADI te otorga el título de propiedad por <strong>10 años</strong>, lo que te protege de plagio y problemas legales.</p>
+        </Article>
+        <Article
+        src="/riesgo.avif"
+        alt="Imagen de los riesgos que corren las marcas sin registrar"
+        title="Riesgos"
+        href="/riesgo"
+        linkText="Ver más"
+        >
+        <p>Si no registras tu <strong>marca</strong>, corres el riesgo de perderla si alguien más decide adueñarse de ella y registrarla por medio del <strong>SENADI</strong>.</p>
+        </Article>
+    </div>
+    <div class="circularLight"></div>
+    <div class="circularLight two"></div>
+</section>
+
+<style>
+    section{
+        grid-template-rows: 4rem min-content 1fr;
+    }
+    #sectionContainer{
+        display: grid;
+        grid-auto-rows: minmax(min(17.5rem, 100%), 22.5rem);
+        grid-template-columns: repeat(auto-fill, minmax(min(17.5rem, 100%), 1fr));
+        gap: 1.5rem;
+        margin: 0 auto;
+        z-index: 1;
+    }
+    .circularLight{
+        position: absolute;
+        aspect-ratio: 1/1;
+        height: 20%;
+        width: auto;
+        background: radial-gradient(#FFFFFF77, #1E1E2C77);
+        border-radius: 50%;
+        opacity: 0;
+        animation: movingAround 10s ease-in-out infinite;
+        z-index: 0;
+    }
+    .circularLight.two{
+        animation: movingTwo 12s ease-in-out infinite;
+        height: 10%;
+        width: auto;
+        aspect-ratio: 1/1;
+    }
+    strong{
+        color: var(--dark-accent);
+    }
+    @keyframes movingAround {
+        0% {
+            right: 0%;
+            top: 40%;
+        }
+        10%{
+            opacity: .1;
+        }
+        50% {
+            right: 60%;
+            top: 0%;
+            opacity: .3;
+        }
+        100%{
+            right: 100%;
+            top: 90%;
+            opacity: 0;
+        }
+    }
+    @keyframes movingTwo {
+        0% {
+            left: 0%;
+            bottom: 40%;
+        }
+        50% {
+            left: 60%;
+            bottom: 0%;
+            opacity: .3;
+        }
+        100%{
+            left: 100%;
+            bottom: 90%;
+            opacity: 0;
+        }
+    }
+    @media (width < 520px) {
+        section{
+        grid-template-rows: min-content 1fr;
+    }
+    }
+</style>

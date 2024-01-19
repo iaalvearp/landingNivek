@@ -1,0 +1,38 @@
+---
+const {src, alt, title, href, linkText} = Astro.props;
+---
+<article class="relative overflow-hidden rounded">
+    <div class="curtainTop absolute h-2/4 w-full bg-[var(--dark-blur-background)] -translate-y-full transition duration-300 border-none" ></div>
+    <img class="w-full h-full object-cover" src={src} alt={alt}>
+    <div id="textContainer" class="absolute delay-0 p-4 h-full w-full grid content-center cursor-default gap-[0.5em]">
+        <h2 class="text-5xl text-balance text-center text-[var(--dark-accent)]">{title}</h2>
+        <p class="text-pretty text-lg">
+            <slot>
+        </p>
+        <a class="py-2 px-8 rounded-sm transition duration-500 hover:-translate-y-1 text-center font-medium md:text-lg bg-[var(--dark-accent)] hover:bg-transparent text-[var(--dark-background)] hover:text-[var(--dark-accent)] border-[1px] border-[var(--dark-accent)] my-[1em] cursor-pointer" href={href}>
+            {linkText}
+        </a>
+    </div>
+    <div class="curtainBottom absolute h-2/4 w-full bottom-0 bg-[var(--dark-blur-background)] translate-y-full transition duration-300 border-none" ></div>
+</article>
+
+<style>
+    article{
+        box-shadow: 0px 0px 2rem #000000;
+    }
+    #textContainer{
+
+    }
+    article:hover #textContainer{
+        transition-duration: 300ms;
+        transform: translateY(-100%);
+        transition-delay: 300ms;
+        z-index: 2;
+    }
+    .curtainTop, .curtainBottom{
+        backdrop-filter: blur(10px);
+    }
+    article:hover .curtainTop, article:hover .curtainBottom{
+        transform: translateY(0);
+    }
+</style>

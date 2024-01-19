@@ -1,0 +1,137 @@
+---
+import LogoNav from "./logoNav.astro";
+
+
+---
+
+<footer class="bg-[var(--dark-background)] grid md:grid-rows-[7rem_min-content_min-content] w-full h-full">
+    <div id="footerContainer" class="md:w-4/5">
+        <div class=" w-full h-full grid justify-center items-center max-h-20 mt-4 md:py-4">
+            <LogoNav></LogoNav>    
+        </div>
+        <nav class="grid grid-flow-col justify-items-center md:px-8 mt-4 md:mt-0">
+            <a href="#home">Inicio</a>
+            <a href="#register">Registro</a>
+            <a href="#services">Servicios</a>
+        </nav>
+        <div class="grid md:justify-items-end justify-items-center mb-4 md:mb-0">
+            <div class="flex gap-1 bg-[var(--dark-hover)] p-2 rounded">
+                <a href="mailto:nbrands@nivekstudio.com">nbrands@nivekstudio.com</a>
+                <div class="grid grid-cols-1 grid-rows-1">
+                    <svg
+                    class="col-start-1 col-end-2 row-start-1 row-end-2 cursor-pointer hover:text-[var(--dark-accent)] duration-300"
+                    id="copy" 
+                    width="24" 
+                    height="24" 
+                    viewBox="0 0 24 24" 
+                    stroke-width="1" 
+                    stroke="currentColor" 
+                    fill="none" 
+                    stroke-linecap="round" 
+                    stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 7m0 2.667a2.667 2.667 0 0 1 2.667 -2.667h8.666a2.667 2.667 0 0 1 2.667 2.667v8.666a2.667 2.667 0 0 1 -2.667 2.667h-8.666a2.667 2.667 0 0 1 -2.667 -2.667z" /><path d="M4.012 16.737a2.005 2.005 0 0 1 -1.012 -1.737v-10c0 -1.1 .9 -2 2 -2h10c.75 0 1.158 .385 1.5 1" />
+                    </svg>
+                    <svg
+                    class="col-start-1 col-end-2 row-start-1 row-end-2 text-[var(--dark-accent)] duration-300"
+                    id="copied" 
+                    width="24" 
+                    height="24" 
+                    viewBox="0 0 24 24" 
+                    stroke-width="1" 
+                    stroke="currentColor" 
+                    fill="none" 
+                    stroke-linecap="round" 
+                    stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 5h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2h-2" /><path d="M9 3m0 2a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v0a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2z" /><path d="M9 14l2 2l4 -4" /></svg>
+                </div>
+            </div>
+            <a href="https://wa.me/593939690213" class="flex gap-1 hover:text-[var(--dark-accent)] duration-300 my-2">
+                <svg 
+                width="24" 
+                height="24" 
+                viewBox="0 0 24 24" 
+                stroke-width="1" 
+                stroke="currentColor" 
+                fill="none" 
+                stroke-linecap="round" 
+                stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" /><path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1" /></svg>
+                +593939690213
+            </a>    
+        </div> 
+    </div>
+    <div id="socialNavContainer" class="flex justify-center gap-2 w-full h-full">
+        <a class="rounded transition-colors duration-500 my-4" href="https://www.facebook.com/nivek.ec" target="_blank" rel="noopener noreferrer">
+            <svg
+            class="transition duration-500 hover:text-[var(--dark-accent)] hover:-translate-y-1 cursor-pointer" 
+            width="32"
+            height="32"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" /></svg>
+        </a>
+        <a class="rounded transition-colors duration-500 my-4" href="https://www.instagram.com/nivekstudio/" target="_blank" rel="noopener noreferrer">
+            <svg
+            class="transition duration-500 hover:text-[var(--dark-accent)] hover:-translate-y-1 cursor-pointer" 
+            width="32"
+            height="32"
+            viewBox="0 0 24 24" 
+            stroke-width="1.5" 
+            stroke="currentColor" 
+            fill="none" 
+            stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 4m0 4a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z" /><path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" /><path d="M16.5 7.5l0 .01" /></svg>
+        </a>
+    </div>
+    <p class="text-center pb-4">©️ Made it with ❤️ by AlPes</p>
+    <!--
+    <img src="https://nivekstudio.com/nbrands/img/nivekstudio.proceso-07.png">
+-->
+</footer>
+
+<style>
+    #footerContainer{
+        width: 90%;
+        display: grid;
+        align-items: center;
+        grid-auto-columns: minmax(min(10rem, 100%),15rem);
+        gap: 1.5rem;
+        margin: 1rem auto 0 auto;
+        border-bottom: 1px solid var(--dark-text);
+        justify-content: center;
+    }
+    nav a{
+        text-decoration: none;
+        transition-duration: 300ms;
+    }
+    nav a:hover{
+        color: var(--dark-accent);
+        text-decoration: underline;
+    }
+    #copied {
+        transform: scale(0);
+    }
+    #copy{
+        transform: scale(1);
+    }
+    @media (width > 767px) {
+        #footerContainer{
+            grid-template-columns: repeat(auto-fill,minmax(min(17.5rem,100%),1fr));
+            justify-content: start;
+        }
+    }
+</style>
+<script>
+    const btnCopy = document.getElementById('copy');
+    const btnCopied = document.getElementById('copied');
+
+    const copyEmailClipboard = () => navigator.clipboard.writeText('nbrands@nivekstudio.com');
+
+    btnCopy.addEventListener('click', ()=>{
+        btnCopied.style.transform = 'scale(1)';
+        btnCopy.style.transform = 'scale(0)';
+        copyEmailClipboard();
+        setTimeout(() => {
+            btnCopied.style.transform = 'scale(0)';
+            btnCopy.style.transform = 'scale(1)';
+        }, 3000);
+    })
+</script>

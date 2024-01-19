@@ -1,8 +1,9 @@
 ---
-
+import BtnAccent from "./BtnAccent.astro";
+import Btn from "./Btn.astro";
 ---
 
-<header class="h-full w-full grid justify-items-center">
+<header id="home" class="h-full w-full grid justify-items-center">
     <div class="h-16 w-full"></div>
     <main class="w-[90%] md:w-4/5 h-full mx-auto z-10 grid gap-5 place-content-center">
         <h1 class=" text-5xl md:text-7xl text-[var(--dark-text)] font-bold text-center z-10 mb-10 md:mb-5">
@@ -12,25 +13,27 @@
             </span>
             con nuestro equipo.
         </h1>
-        <p class="text-[var(--dark-text)] text-center md:text-lg">
+        <p class="max-w-96 text-[var(--dark-text)] text-center md:text-lg mx-auto mb-7">
             Protege tu marca con <span class="text-[var(--dark-accent)] font-bold">Nivek Studio</span> y asegura el futuro de tu negocio. 
         </p>
         <div id="btnContainer" class="grid gap-4 justify-center">
-            <a class="py-3 px-8 rounded-sm transition-colors duration-300 text-center font-medium md:text-lg bg-[var(--dark-accent)] hover:bg-transparent text-[var(--dark-text)] hover:text-[var(--dark-accent)] border-[1px] border-[var(--dark-accent)]" href="#" target="_blank" rel="noopener noreferrer">
+            <BtnAccent
+            href="#">
                 Ver más
-            </a>
-            <a class="py-3 px-8 rounded-sm transition-colors duration-300 text-center font-medium md:text-lg border-[1px] border-[var(--dark-text)] hover:bg-[var(--dark-text)] hover:text-[var(--dark-background)]" href="#" target="_blank" rel="noopener noreferrer">
+            </BtnAccent>
+            <Btn
+            href="#">
                 Contáctanos
-            </a>
+            </Btn>
         </div>
     </main>
     <video class="absolute h-full w-full object-cover" src="/hero-nivek.mp4" autoplay loop muted></video>
+    <span class="h-full w-full absolute bg-[--dark-blur-background]"></span>
 </header>
 
 <style>
     header {
         grid-auto-rows: min-content;
-
     }
     main{
         height: calc(100vh - 4rem);
